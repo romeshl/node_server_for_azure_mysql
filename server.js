@@ -14,10 +14,10 @@ const pool = mysql.createPool({
   database: process.env.MYSQL_DATABASE, //name of the database you want to query
   port: 3306,
   ssl: {
-    ca: fs.readFileSync(
-      defaultDirectory.resolve(__dirname, "./DigiCertGlobalRootCA.crt.pem")
-    ),
+    ca: fs.readFileSync("./DigiCertGlobalRootCA.crt.pem"),
   },
+
+  // defaultDirectory.resolve(__dirname,
   waitForConnections: true, //if want to allow people to queue for connection spots
   connectionLimit: 10, // number of available connection spots
   queueLimit: 0, //how many people can queue for a connection spot- if 0 as many people as needed can queue
