@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - world-API-backend
+name: Build and deploy Node.js app to Azure Web App - World-API-backend
 
 on:
   push:
@@ -57,15 +57,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F728147FD36542F7BFE67C67E634E3B3 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_908CB15893754B20BC719068AE436C5C }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E46FC12E54D24A358C86D5ACC8B9FD7C }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7F93CE8AAD894364B345426BECF40124 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_709373ECAFAA4D32843FB0EE8C9953A8 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BCFAE405C9BB4142A7774C97B3C13C35 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'world-API-backend'
+          app-name: 'World-API-backend'
           slot-name: 'Production'
           package: .
           
